@@ -1,0 +1,7 @@
+^(
+ (\.)|
+ (test\/)|
+ (TODO\.)|
+ (mplay.gemspec)|
+ (History\.)
+)

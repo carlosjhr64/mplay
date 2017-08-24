@@ -1,0 +1,14 @@
+#! ruby
+require 'test/unit'
+require 'mplay/version'
+
+class TestVersion < Test::Unit::TestCase
+  VERSION = '3.0.0'
+  def test_version
+    assert_nothing_raised() do
+      assert_equal(VERSION, Mplay::VERSION)
+      assert_equal(VERSION, File.read('data/VERSION').strip)
+      assert( system "grep version mplay.gemspec | grep = | grep #{VERSION}" )
+    end
+  end
+end

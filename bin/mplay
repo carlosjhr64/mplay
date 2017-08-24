@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+require 'mplay'
+
+if a0 = ARGV.shift
+  unless ARGV.shift # only accepts one option
+
+    # Version
+    if ['-v','--version'].include?(a0)
+      puts Mplay::VERSION
+      exit 0
+    end
+
+    # Help
+    if ['-h','--help'].include?(a0)
+      puts <<-HELP
+Usage:
+  mplay
+  mplay :options
+Options:
+  -v --version  \tShow version and quit.
+  -h --help     \tShow this help and quit.
+  --trim        \tTrim the database.
+  --old=DAYS    \tRemove videos not seen in days.
+  --limit=NUMBER\tKeep only number of last seen videos.
+      HELP
+      exit 0
+    end
+
+    # Trim
+    if a0=='--trim'
+      Mplay.trim
+      exit 0
+    end
+
+    # Old
+    if a0=~/^--old=(\d+)$/
+      Mplay.old($1.to_i)
+      exit 0
+    end
+
+    # Limit
+    if a0=~/^--limit=(\d+)$/
+      Mplay.limit($1.to_i)
+      exit 0
+    end
+
+  end
+  $stderr.puts "Please match usage."
+  exit 64
+end
+
+Gtk3App.main Mplay

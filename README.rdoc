@@ -1,0 +1,124 @@
+= mplay-2
+
+{<img src="https://badge.fury.io/rb/mplay.svg" alt="Gem Version" />}[http://badge.fury.io/rb/mplay]
+
+== DESCRIPTION:
+
+A gtk3app youtube-dl and mplayer manager/gui.
+
+== SYNOPSIS:
+
+   mplay
+
+== FEATURES:
+
+* Permanently caches your video while you watch.
+* Search through your cached videos.
+* When in minime mode, automatically downloads and plays video when video's webpage url is copied to clipboard.
+* Keyword search of cached data.
+* OMG, it's just plain AWESOME!
+
+== INSTALL:
+
+  $ sudo gem install mplay
+
+== HELP:
+
+=== Window Mode:
+
+Enter the webpage url of the video you'd like to download.
+Copying the webage url to clipboard will auto-fill the url entry.
+Then press the "Go" button.
+You should see a label appear below showing "Running..." and moments later "Done!".
+This label acts as a status bar.
+Below the status bar you'll see the title of the video, some info on it, followed by a combo box with the available formats.
+The "Play" button will Tee the file download both to cache and to mplayer for viewing.
+The "Download" button will do a straight download to cache and you'll still be able to press "Play" while it's downloading.
+The advantage of "Play" for downloading is that you can cancel the download by terminating mplayer early.
+
+Once a video is cached, "Play" will quickly pop up mplayer to play the video, and the "Export" button appears.
+With "Export" you can save a copy (hard link if possible) in a directory of your choice.
+
+Note that the gui caches data from youtube-dl.
+You may find that the video urls for download expired sometimes.
+In that case, check the "Reload" check box to reload the data.
+Most of the time, you'll want the "Reload" check box unchecked though.
+
+The "Web" button will open the webpage url in your default browser.
+Middle clicking the "Web" button will copy the webpage url to the primary clipboard.
+Left clicking the "Web" button will copy the webpage url to clipboard and autofill the url entry with it.
+This is specially usefull when viewing a playlist and you just want to reload data on the one video.
+
+You can keyword search your cached data.
+Enter keywords to search in the url entry instead of a url.
+Also, you can search for a string in a record field like "field:string".
+For example, "categories:music", or "uploader:vevo".
+
+=== Minime Mode:
+
+Left click most anywhere on the application window to get the application meno.
+You'll see a Mini-me option.
+Click it to enter Minime mode.
+As the main windown hides, a small "always on top" window will appear on the right corner of the screen.
+Now if you copy a video webpage url (one youtube-dl can do) to clip clipboard,
+the video will automatically play (might take a few moments if it's not cached yet).
+
+=== Cache Maintainance:
+
+By default, the cache is allowed to grow indefinitely.
+The cache is in:
+
+   ~/.cache/gtk3app/mplay
+   ~/.cache/gtk3app/mplay/db # data
+   ~/.cache/gtk3app/mplay/vd # videos
+
+* Running "gtk3app mplay --trim" will remove data which does not reference any cached videos.
+* Running "gtk3app mplay --limit=100" will delete videos down to the last 100 viewed, for example.
+* Running "gtk3app mplay --old=30" will delete videos older that 30 days, for example.
+
+=== Sugestions:
+
+Consider using devilspie to have mplayer spawn "always on top".
+
+== CONFIGURATION:
+
+User configuration file is in:
+
+   ~/.config/gtk3app/mplay/config-?.?.yml
+
+Most likely fields to edit:
+
+* Max: Maximum number of videos to show from a playlist, set at 100.
+* PreferedWidth, PreferedHeight: Default video size set as 640X360.
+* PREFERED_EXT: Default prefered extension list set as ['mp4','flv'].
+* PREFERED_FID: Default prefered format id list set as ['18','5'].
+
+== THIS IS RUBY!
+
+Yes, you can fork it and make it fit your needs.
+Of course!
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2017 carlosjhr64
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

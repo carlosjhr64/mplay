@@ -1,0 +1,33 @@
+TODO:
+
+  Like button for youtube videos
+
+DONE (2.4.0)
+
+  Sorting data files by latest first in search.
+
+DONE (2.2.0)
+
+  minime reloads expired data when there's no cached video.
+
+DONE (2.1.0):
+
+  webpage url to clipboard
+  Mplay.fitness: mostly makes sense.
+  Video cache trimmer
+  cached[id] is heuristical... check that it breaks gracefully.
+  Better trigger for Download => Export
+  More efficient selection and sort of search results
+  digest needs not the http/https part.
+  Database cache trimmer
+
+DONE (2.0.0):
+
+  Default export to ~/Videos
+  Review Score, specifically rating. See Gtk2 version.
+  Cancel downloads
+  Search
+
+== File List
+
+
