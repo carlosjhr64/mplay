@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name     = 'mplay'
-  s.version  = '3.0.0'
+  s.version  = '3.0.1'
 
   s.homepage = 'https://github.com/carlosjhr64/mplay'
 

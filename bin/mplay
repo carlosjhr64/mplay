@@ -28,19 +28,19 @@ Options:
 
     # Trim
     if a0=='--trim'
-      Mplay.trim
+      Mplay::Mplay.trim
       exit 0
     end
 
     # Old
     if a0=~/^--old=(\d+)$/
-      Mplay.old($1.to_i)
+      Mplay::Mplay.old($1.to_i)
       exit 0
     end
 
     # Limit
     if a0=~/^--limit=(\d+)$/
-      Mplay.limit($1.to_i)
+      Mplay::Mplay.limit($1.to_i)
       exit 0
     end
 
