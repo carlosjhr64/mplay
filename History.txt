@@ -15,3 +15,5 @@ d4608d5db8502de3c20b6ec51c87cc84  pkg/mplay-2.1.0.gem
 07146edbcb0d53f59b279bcc08e3c6e5  pkg/mplay-2.5.1.gem
 === 2.6.0 / 2016-01-20 18:29:21 -0800
 412d83c5f26767e028d305040752fa3f  pkg/mplay-2.6.0.gem
+=== 3.0.0 / 2017-08-24 09:51:23 -0700
+2c80140a28adaed0c15d2bdd6b86f31a  pkg/mplay-3.0.0.gem
