@@ -24,6 +24,16 @@ A gtk3app youtube-dl and mplayer manager/gui.
 
 == HELP:
 
+   Usage:
+     mplay
+     mplay :options
+   Options:
+     -v --version  	Show version and quit.
+     -h --help     	Show this help and quit.
+     --trim        	Trim the database.
+     --old=DAYS    	Remove videos not seen in days.
+     --limit=NUMBER	Keep only number of last seen videos.
+
 === Window Mode:
 
 Enter the webpage url of the video you'd like to download.
