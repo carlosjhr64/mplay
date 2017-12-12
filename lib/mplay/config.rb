@@ -129,10 +129,10 @@ module Mplay
         set_version: VERSION.semantic(0..1),
         set_copyright: '(c) 2017 CarlosJHR64',
         set_comments: 'A Gtk3App YouTube-DL Mplayer Manager',
-        set_website: 'https://github.com/carlosjhr64/mplay-2',
+        set_website: 'https://github.com/carlosjhr64/mplay',
         set_website_label: 'See it at GitHub!',
       },
-      HelpFile: 'https://github.com/carlosjhr64/mplay-2',
+      HelpFile: 'https://github.com/carlosjhr64/mplay',
       Logo: "#{XDG['DATA']}/gtk3app/mplay/logo.png",
     },
 
