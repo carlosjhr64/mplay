@@ -1,3 +1,7 @@
+module Mplay
+  VERSION = '3.1.0'
+end
+
 # Gtk2App
 require 'gtk3app'
 
@@ -14,7 +18,6 @@ require 'helpema'
 require 'base_convert'
 
 # This Gem:
-require_relative 'mplay/version.rb'
 require_relative 'mplay/config.rb'
 require_relative 'mplay/such_parts.rb'
 require_relative 'mplay/mplay.rb'

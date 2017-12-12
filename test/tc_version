@@ -1,9 +1,9 @@
 #! ruby
 require 'test/unit'
-require 'mplay/version'
+require 'mplay'
 
 class TestVersion < Test::Unit::TestCase
-  VERSION = '3.0.1'
+  VERSION = '3.1.0'
   def test_version
     assert_nothing_raised() do
       assert_equal(VERSION, Mplay::VERSION)
