@@ -36,7 +36,6 @@ lib/mplay.rb
 lib/mplay/config.rb
 lib/mplay/mplay.rb
 lib/mplay/such_parts.rb
-lib/mplay/version.rb
   )
   s.executables << 'mplay'
   s.add_runtime_dependency 'gtk3app', '~> 2.0', '>= 2.0.1'
